@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="mapGeneration.js"></script>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <script>
+        
+        generateMap(11);
+    </script>
+    <div class="hexGrid" id="hexGrid">
+        <div class='hex1 hexagonList'></div>
+        <div class='hex2 hexagonList'></div>
+        <div class='hex3 hexagonList'></div>
+        <div class='hex4 hexagonList'></div>
+        <div class='hex5 hexagonList'></div>
+        <div class='hex6 hexagonList'></div>
+        <div class='hex7 hexagonList'></div>
+        <div class='hex8 hexagonList'></div>
+        <div class='hex9 hexagonList'></div>
+        <div class='hex10 hexagonList'></div>
+        <div class='hex11 hexagonList'></div>
+    </div>
+    <script>
+        
+        renderView();
+    </script>
+    
+    <script>
+        var hexElements = document.getElementsByClassName("hex");
+    
+        for (var i = 0; i < hexElements.length; i++) {
+            hexElements[i].addEventListener("click", function () {
+                var id = this.id;
+                if (!walls.includes(parseInt(id)) && start != id){
+                    if(finalGoal.includes(start)){
+                        const div = document.getElementById("hexGrid");
+                        div.innerHTML = "<h1>You Lost!</h1>";
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }else{
+                        walls.push(parseInt(id));
+                        this.style.backgroundColor = "#fc8c03";
+                        console.log(id);
+                        searchPath();
+                    }
+                }
+                
+            });
+        }
+    </script>
+</body>
+</html>

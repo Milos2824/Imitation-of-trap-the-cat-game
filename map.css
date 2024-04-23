@@ -1,0 +1,66 @@
+.hexGrid {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.hexagonList{
+    position: absolute;
+    width: 1000px;
+}
+
+.hexagon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffcc00;
+    margin-top: 0;
+    padding-top: 0;
+    cursor:pointer;
+    border-style: none;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hex {
+    height: 80px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.shiftHex {
+    margin-left: 43px;
+}
+
+.hex1:nth-child(1) {
+    margin-top: 0px;
+}
+.hex2:nth-child(2) {
+    margin-top: 67px;
+}
+.hex3:nth-child(3) {
+    margin-top: 134px;
+}
+.hex4:nth-child(4) {
+    margin-top: 201px;
+}
+.hex5:nth-child(5) {
+    margin-top: 268px;
+}
+.hex6:nth-child(6) {
+    margin-top: 335px;
+}
+.hex7:nth-child(7) {
+    margin-top: 402px;
+}
+.hex8:nth-child(8) {
+    margin-top: 469px;
+}
+.hex9:nth-child(9) {
+    margin-top: 536px;
+}
+.hex10:nth-child(10) {
+    margin-top: 603px;
+}
+.hex11:nth-child(11) {
+    margin-top: 670px;
+}
